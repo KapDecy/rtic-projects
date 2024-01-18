@@ -1,5 +1,5 @@
 [target.'cfg(all(target_arch = "arm", target_os = "none"))']
-runner = "probe-rs run --chip STM32F767ZITx"
+runner = "probe-rs run --chip STM32F103C8T6"
 
 rustflags = [
   # LLD (shipped with the Rust toolchain) is used as the default linker
@@ -22,7 +22,7 @@ rustflags = [
 ]
 
 [build]
-target = "thumbv7em-none-eabihf"
+target = "thumbv7m-none-eabi"
 
 [env]
 DEFMT_LOG = "info"
